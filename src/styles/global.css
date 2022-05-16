@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+    h1 {
+        @apply text-4xl my-10
+    }
+
+    .heading {
+        font-size: 3.25rem;
+        line-height: 1.2;
+        @apply font-medium
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .h2 {
+        @apply text-3xl font-medium leading-10
+    }
+
+    .section {
+        @apply py-10
+    }
+    
+    .section-large {
+        @apply py-20
+    }
+
+    .third-heading {
+        @apply text-xl font-medium
+    }
+
+    p {
+        color: #484c7a;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.78;    
+    }
+
+    .primary-button {
+        @apply py-3 px-8 text-white uppercase font-light rounded-md;
+        background: #0B6AE6;
+    }
+
+    .secondary-button {
+        @apply py-3 px-8 text-white uppercase font-light rounded-md;
+        background: #151515;
+    }
+
+    .markdown-content h1 {
+        @apply text-4xl
+    }
+    
+    .markdown-content h2 {
+        @apply text-3xl
+    }
+
+    .markdown-content h3 {
+        @apply text-2xl mt-10 mb-5
+    }
+
+    .markdown-content p {
+        @apply my-5
+    }
+}
+
+/* END LAYER BASE */
+
+.primary-bg {
+    background-color: #0A2540;
+}
+
+.text-white p {
+    color: rgb(255 255 255 / 70%);
+}
+
+.gradient-heading {
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 4s ease-in-out infinite;
+    -moz-animation: animated_text 4s ease-in-out infinite;
+    -webkit-animation: animated_text 4s ease-in-out infinite;
+    background: linear-gradient(-45deg,#0b6ae6,#9107e1,#d300d6,#039be1);
+    -webkit-background-clip: text;
+    background-size: 300%;
+}
+
+@keyframes animated_text {
+	0% { background-position: 0px 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0px 50%; }
+}
+
+.serhant {
+    color: #131176;
+}
+
+footer ul li a,
+footer p {
+    color: #bac0c3;
+}

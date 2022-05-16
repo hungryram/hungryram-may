@@ -1,0 +1,6 @@
+.service-list li {
+    border-top: 1px solid #e5e5e5;
+    list-style: none;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
