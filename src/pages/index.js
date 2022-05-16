@@ -3,11 +3,11 @@ import { Link } from "gatsby"
 import * as React from "react"
 import Layout from "../components/global/Layout"
 import UpCity from "../images/best-web-developer-upcity.png"
-import Showcase from "../components/home/showcase"
 import Performance from "../components/home/Performance"
 import Review from "../components/home/Review"
 import Features from "../components/home/Features"
 import Closing from "../components/home/Closing"
+import Showcase from "../components/home/Showcase"
 import Seo from "../components/global/Seo"
 
 
