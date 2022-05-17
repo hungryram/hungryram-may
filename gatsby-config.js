@@ -12,6 +12,12 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-netlify",
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        "icon": "src/images/icon.png"
+      }
+    },
+    {
       resolve: "gatsby-plugin-google-gtag",
       options: {
         trackingIds: [
