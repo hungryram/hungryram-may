@@ -12,8 +12,8 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         '.container': {
-          paddingLeft: '40px',
-          paddingRight: '40px',
+          paddingLeft: '20px',
+          paddingRight: '20px',
           '@screen xl': {
             maxWidth: '1300px',
           },
