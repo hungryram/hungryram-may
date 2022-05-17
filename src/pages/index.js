@@ -63,9 +63,11 @@ export default function Home() {
         title="Orange County Web Design - Hungry Ram Web Design"
         description="We deliver the highest-performing SEO website designs for real estate and small businesses to help stand out from local competitors. Find out how our sites are different."
       />
-      <div className="py-16 text-center justify-center flex">
-        <div className="lg:w-1/2">
-          <h1 className="heading">We build <span className="gradient-heading">high-performance websites</span> that convert</h1>
+    <div className="section">
+      <div className="container">
+      <div className="text-center justify-center flex">
+        <div className="md:w-2/3">
+          <h1 className="md:heading text-3xl font-medium">We build <span className="gradient-heading">high-performance websites</span> that convert</h1>
           <p>Hungry Ram is an award-winning web design and development studio. Work with the best web design team to deliver effective websites that convert.</p>
           <div className="mt-10">
             <Link to="/contact" className="primary-button mx-2">Contact</Link>
@@ -73,6 +75,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      </div>
+    </div>
       <div className="py-10">
         <div className="container flex justify-center">
           <StaticImage
