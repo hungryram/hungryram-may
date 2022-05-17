@@ -67,7 +67,7 @@ export default function Home() {
       <div className="container">
       <div className="text-center justify-center flex">
         <div className="md:w-2/3">
-          <h1 className="md:heading text-3xl font-medium">We build <span className="gradient-heading">high-performance websites</span> that convert</h1>
+          <h1 className="md:heading text-3xl font-medium text-center">We build <span className="gradient-heading">high-performance websites</span> that convert</h1>
           <p>Hungry Ram is an award-winning web design and development studio. Work with the best web design team to deliver effective websites that convert.</p>
           <div className="mt-10">
             <Link to="/contact" className="primary-button mx-2">Contact</Link>
@@ -148,7 +148,7 @@ export default function Home() {
         <div className="container">
           <div className="section">
             <div className="md:w-1/2 w-full mt-10">
-              <h2 className="h2">We specialize in <span className="gradient-heading">real estate</span> and <span className="gradient-heading">small business</span> web design</h2>
+              <h2 className="h2">We specialize in <span className="gradient-heading">real estate and small business</span> web designs</h2>
             </div>
             <div className="md:columns-2 mt-10">
               <p className="mb-5">Hungry Ram delivers a better solution that gives our clients in real estate and small businesses the edge over their competitors. We adopted a new method called Jamstack that provides the fastest and most secure websites. With our efficiently built webites, our clients see an average of 20% increase in conversion rates when they use our website!</p>
