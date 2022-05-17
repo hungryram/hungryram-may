@@ -104,17 +104,17 @@ exports.onCreateNode = async ({node, getNode, actions, store, cache, getCache, c
 
     // Generate Partners Nodes
 
-    if(node.internal.type === 'File' && node.sourceInstanceName === 'partners' && node.base !== '_index.md'){
+    if(node.internal.type === 'File' && node.sourceInstanceName === 'locations' && node.base !== '_index.md'){
         const markdownNode = await getNode(node.children[0])
         const slug = createFilePath({ node, getNode, basePath: `pages` })
         createNode({
             ...markdownNode,
-            id: `${node.id}-partners`,
+            id: `${node.id}-locations`,
             slug: slug,
             parent: node.id,
             children: [`${markdownNode.id}`],
             internal: {
-                type: 'Partner',
+                type: 'Location',
                 content: JSON.stringify(markdownNode),
                 contentDigest: createContentDigest(markdownNode)
             },
