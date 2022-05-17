@@ -25,7 +25,7 @@ export default function Contact() {
                             </ul>
                         </div>
                         <div>
-                            <form action="#" method="POST">
+                        <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/thank-you">
                                 <div className="shadow overflow-hidden sm:rounded-md">
                                     <div className="px-4 py-5 bg-white sm:p-6">
                                         <div className="grid grid-cols-6 gap-6">
