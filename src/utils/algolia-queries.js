@@ -3,26 +3,23 @@ const escapeStringRegexp = require("escape-string-regexp")
 const pagePath = `content/documentation`
 const indexName = `Documentation`
 
-const pageQuery = `{
-  pages: allMarkdownRemark(
-    filter: {
-      fileAbsolutePath: { regex: "/${escapeStringRegexp(pagePath)}/" },
-    }
-  ) {
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-        }
-        fields {
-          slug
-        }
-        excerpt(pruneLength: 200)
+const pageQuery = `
+{
+  allDocumentation {
+    nodes {
+      slug
+      id
+      frontmatter {
+        title
+      }
+      childMarkdownRemark {
+        excerpt(pruneLength: 200, truncate: true)
       }
     }
   }
-}`
+}
+
+`
 
 function pageToAlgoliaRecord({ node: { id, frontmatter, fields, ...rest } }) {
   return {
