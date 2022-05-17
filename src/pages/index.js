@@ -84,24 +84,24 @@ export default function Home() {
 
       <div className="container text-center py-10">
         <h2 className="third-heading">Trusted by established names</h2>
-        <div className="my-10 flex items-center justify-center">
-          <StaticImage
+        <div className="my-10 md:flex items-center justify-center flex-none">
+        <StaticImage
             src="../images/serhant.png"
             width={150}
             alt="SERHANT."
-            class="mx-5"
+            class="m-5"
           />
           <StaticImage
             src="../images/realtyone-logo-new.png"
             width={150}
             alt="SERHANT."
-            class="mx-5"
+            class="m-5"
           />
           <StaticImage
             src="../images/c21garlandlogo2.png"
             width={150}
             alt="SERHANT."
-            class="mx-5"
+            class="m-5"
           />
           <StaticImage
             src="../images/pho-ha-plus.png"
@@ -113,7 +113,7 @@ export default function Home() {
             src="../images/exp-brokered-by.png"
             width={150}
             alt="SERHANT."
-            class="mx-5"
+            class="m-5"
           />
         </div>
       </div>
@@ -122,14 +122,14 @@ export default function Home() {
         <div className="container primary-bg flex justify-center text-center rounded-xl">
           <div className="w-5/6 text-white py-10">
             <h2 className="third-heading">Award winning web designs</h2>
-            <div className="py-10 flex justify-center">
-              <div className="mx-5">
+            <div className="py-10 md:flex flex justify-center text-center">
+              <div className="m-5">
                 <a href="https://www.expertise.com/ca/anaheim/web-developers" /> <img width="190" height="160" src="https://res.cloudinary.com/expertise-com/image/upload/f_auto,fl_lossy,q_auto/w_auto/remote_media/awards/ca_anaheim_web-developers_2022_inverse.svg" alt="Top Web Developer in Anaheim" />
               </div>
-              <div className="mx-5">
+              <div className="m-5">
                 <img src="https://res.cloudinary.com/hungryram19/image/upload/v1647290400/hungryram/most-reviewed-agency.png" width="120" alt="" />
               </div>
-              <div className="mx-5">
+              <div className="m-5">
                 <img src={UpCity} width="150" alt="TOP WEBSITE DEVELOPER" />
               </div>
             </div>
