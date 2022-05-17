@@ -48,13 +48,13 @@ export default function ServiceContent({ title, intro, featuredImage, altTag, co
                     <>
                         <div className="section">
                             <div className="container">
-                                <div className="lg:flex flex-none gap-10">
-                                    <div className="lg:w-1/2 w-full markdown-content">
+                                <div className="lg:flex flex-none gap-20">
+                                    <div className="lg:w-1/2 w-full markdown-content mb-10">
                                         <h2 className="h2">{title}</h2>
                                         <div className="my-10" dangerouslySetInnerHTML={{ __html: converter.makeHtml(intro) }} />
                                         <Link to="/contact" className="primary-button">Get started</Link>
                                     </div>
-                                    <div className="lg:w-1/2 w-full markdown-content">
+                                    <div className="lg:w-1/2 w-full">
                                         <img src={featuredImage} alt={altTag} />
                                     </div>
                                 </div>
