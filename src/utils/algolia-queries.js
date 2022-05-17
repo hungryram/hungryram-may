@@ -33,7 +33,7 @@ function pageToAlgoliaRecord({ node: { id, frontmatter, fields, ...rest } }) {
 const queries = [
   {
     query: pageQuery,
-    transformer: ({ data }) => data.pages.edges.map(pageToAlgoliaRecord),
+    transformer: ({ data }) => data.pages.map(pageToAlgoliaRecord),
     indexName,
     settings: { attributesToSnippet: [`excerpt:10`] },
   },
