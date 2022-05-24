@@ -25,5 +25,5 @@ third_intro:
   heading: Building up your SEO for Yorba Linda businesses
 search_engine_optimization:
   title_tag: Yorba Linda Web Design | Hungry Ram Web Design
-  meta_description: ""
+  meta_description: "We deliver the highest-performing SEO website designs for real estate and small businesses to help stand out from local competitors. Find out how our sites are different."
 ---

@@ -22,6 +22,6 @@ third_intro:
   heading: The best website services near you
 title: Orange County
 search_engine_optimization:
-  title_tag:
-  meta_description:
+  title_tag: "Hungry Ram Web Design Orange County"
+  meta_description: "We deliver the highest-performing SEO website designs for real estate and small businesses to help stand out from local competitors in Orange County. Find out how our sites are different."
 ---

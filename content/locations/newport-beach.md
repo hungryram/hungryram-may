@@ -22,6 +22,6 @@ third_intro:
   heading: Web design services in Newport Beach
 title: Newport Beach
 search_engine_optimization:
-  title_tag:
-  meta_description:
+  title_tag: "Hungry Ram Web Design Newport Beach"
+  meta_description: "We deliver the highest-performing SEO website designs for real estate and small businesses to help stand out from local competitors. Find out how our sites are different."
 ---
