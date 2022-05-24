@@ -1,4 +1,3 @@
-import { GatsbyImage } from "gatsby-plugin-image";
 import * as React from "react"
 import showdown from "showdown"
 import { Link } from "gatsby";

@@ -1,7 +1,7 @@
 import * as React from "react"
 import Intro from "../components/blocks/Intro"
 import Layout from "../components/global/Layout"
-import { Disclosure, Transition } from '@headlessui/react'
+import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 import { graphql } from "gatsby"
 import Seo from "../components/global/Seo"

@@ -1,8 +1,6 @@
 import { graphql, Link, StaticQuery } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
 import * as React from "react"
 import showdown from "showdown"
-import { ArrowNarrowRightIcon } from "@heroicons/react/outline";
 
 export default function ServiceContent({ title, intro, featuredImage, altTag, content, secondTitle, secondIntro }) {
     const converter = new showdown.Converter();

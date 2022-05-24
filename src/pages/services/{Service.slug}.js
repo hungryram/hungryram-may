@@ -1,6 +1,5 @@
 import { graphql } from "gatsby"
 import * as React from "react"
-import { getDefaultOptions } from "showdown"
 import Intro from "../../components/blocks/Intro"
 import Layout from "../../components/global/Layout"
 import ServiceContent from "../../components/services/ServiceContent"
