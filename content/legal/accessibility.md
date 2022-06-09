@@ -8,11 +8,11 @@ We are committed to providing an accessible website. If you have difficulty acce
 
 We welcome all suggestions and comments about improving efforts to make sure the website is more accessible on this website.
 
-##### Web Accessibility Help
+## Web Accessibility Help
 
 There are actions you can take to adjust your web browser to make your web experience more accessible.
 
-##### I AM BLIND OR CAN'T SEE VERY WELL
+## I AM BLIND OR CAN'T SEE VERY WELL
 
 If you have trouble seeing web pages, the [**US SOCIAL SECURITY ADMINISTRATION OFFERS THESE TIPS**](https://www.ssa.gov/accessibility/) for optimizing your computer and browser to improve your online experience.
 
@@ -23,7 +23,7 @@ If you have trouble seeing web pages, the [**US SOCIAL SECURITY ADMINISTRATION O
 * [**CHANGE BACKGROUND AND TEXT COLORS**](https://www.ssa.gov/accessibility/changecolors.html)
 * [**MAKE YOUR MOUSE POINTER MORE VISIBLE**](https://www.ssa.gov/accessibility/mousepointer.html) (Windows only)
 
-##### If you are deaf or hard of hearing, there are several accessibility features available to you.
+## If you are deaf or hard of hearing, there are several accessibility features available to you.
 
 Accessibility features
 
