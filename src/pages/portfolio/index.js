@@ -38,7 +38,7 @@ export default function PortfolioList({ data }) {
 
 export const query = graphql`
 {
-    allPortfolio {
+    allPortfolio(sort: {fields: frontmatter___date, order: DESC}) {
       nodes {
         frontmatter {
           featured_image
