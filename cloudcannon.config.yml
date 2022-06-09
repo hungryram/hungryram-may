@@ -1,0 +1,15 @@
+collections_config:
+  blog:
+    path: "content/blog"
+    output: true
+    url: "content/blog/[slug]"
+  documentation:
+    path: "content/documentation"
+    output: true
+    url: "content/documentation/[slug]"
+  portfolio:
+    path: "content/portfolio"
+    output: true
+    url: "content/portfolio/[slug]"
+paths:
+  uploads: ./src/images
