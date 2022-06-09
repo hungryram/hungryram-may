@@ -91,7 +91,7 @@ export default function Contact() {
                                                     name="about"
                                                     rows={6}
                                                     className="p-5 focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-2 border-gray-300 rounded-md"
-                                                    placeholder="Your message"
+                                                    placeholder="Your message, please include details about your business"
                                                 />
                                             </div>
                                         </div>

@@ -8,7 +8,7 @@ introduction: >-
   TheFava Advisory is a group of full-time real estate professionals who provide
   highly personalized advisory services, focusing on curated advice based around
   current marketing trends and creative strategies.
-featured_image: /src/images/fava-advisory.jpg
+featured_image: /images/fava-advisory.jpg
 image_alt_tag: Fava Advisory Web Design
 projects:
   - Real Estate

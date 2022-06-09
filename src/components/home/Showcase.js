@@ -4,11 +4,11 @@ import { Link } from "gatsby"
 
 // FEATURED IMAGES
 import Pho from "../../images/pho-ha-plus-diamondbar.jpg"
-import Karina from "../../images/karina-crisp_xlhli4.jpg"
 import Krave from "../../images/kraveanaheim_igowwj.jpg"
 import RN from "../../images/RN-insurance_cyylok.jpg"
 import Westly from "../../images/the-westly-serhant_yqk1bm.jpg"
 import Univers from "../../images/univers-serhant-landing.jpg"
+import Wingferno from "../../images/wingferno.jpg"
 
 export default function Showcase() {
     return (
@@ -38,8 +38,8 @@ export default function Showcase() {
                         </Link>
                     </div>
                     <div className={Styles.showcaseCard}>
-                        <Link to="/portfolio/karina-crisp-summit-realty/">
-                            <img src={Karina} alt="Karina Crisp web design" />
+                        <Link to="/portfolio/wing-ferno/">
+                            <img src={Wingferno} alt="Wing Ferno web design" />
                         </Link>
                     </div>
                     <div className={Styles.showcaseCard}>

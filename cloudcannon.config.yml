@@ -12,4 +12,4 @@ collections_config:
     output: true
     url: "content/portfolio/[slug]"
 paths:
-  uploads: ./src/images
+  uploads: /images
