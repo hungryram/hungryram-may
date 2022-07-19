@@ -4,7 +4,7 @@ export default function ContactForm({ formName }) {
     return (
         <>
             <form name={formName} method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/thank-you">
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value={formName} />
                 <input name="bot-field" type="hidden" />
                 <input type="hidden" name="Subject" value={formName} />
                 <div>
@@ -14,7 +14,6 @@ export default function ContactForm({ formName }) {
                                 <input
                                     type="text"
                                     name="full-name"
-                                    id="full-name"
                                     autoComplete="given-name"
                                     className="mt-5 w-full border-b-black border-b bg-transparent"
                                     placeholder="Full Name"
@@ -47,7 +46,7 @@ export default function ContactForm({ formName }) {
                             <div className="mt-1 col-span-6">
                                 <textarea
                                     id="about"
-                                    name="about"
+                                    name="message"
                                     rows={3}
                                     className="mt-5 w-full border-b-black border-b bg-transparent"
                                     placeholder="Message"
