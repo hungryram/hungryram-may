@@ -11,7 +11,7 @@ export default function LegalList({ data }) {
     return (
         <Layout>
             <Seo
-                title="Legal"
+                title="Legals | Hungry Ram Web Design"
                 description="View our website policies"
             />
             <Intro 
