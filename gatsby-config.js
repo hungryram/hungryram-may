@@ -29,6 +29,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: `aid6jtqz`,
+        dataset: `production`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: `https://www.hungryram.com`,

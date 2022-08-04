@@ -6,7 +6,7 @@ import PortfolioCard from "../../components/portfolio/PortfolioCard"
 import Seo from "../../components/global/Seo"
 
 export default function PortfolioList({ data }) {
-    const frontMatter = data.allPortfolio
+    const frontMatter = data.allSanityPortfolio
     return (
         <Layout>
             <Seo
@@ -23,9 +23,10 @@ export default function PortfolioList({ data }) {
                         {frontMatter.nodes.map((node) => {
                             return (
                                 <PortfolioCard
-                                    image={node.frontmatter.featured_image}
-                                    title={node.frontmatter.title}
-                                    link={node.slug}
+                                    image={node.image.asset.gatsbyImageData}
+                                    title={node.title}
+                                    link={node.slug.current}
+                                    key={node._id}
                                 />
                             )
                         })}
@@ -38,13 +39,18 @@ export default function PortfolioList({ data }) {
 
 export const query = graphql`
 {
-    allPortfolio(sort: {fields: frontmatter___date, order: DESC}) {
+    allSanityPortfolio {
       nodes {
-        frontmatter {
-          featured_image
-          title
+        slug {
+          current
         }
-        slug
+        image {
+          asset {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        _id
+        title
       }
     }
   }

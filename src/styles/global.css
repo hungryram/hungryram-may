@@ -108,3 +108,38 @@ footer ul li a,
 footer p {
     color: #bac0c3;
 }
+
+
+/* CONTENT */
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    @apply mt-4 mb-2;
+}
+
+.content h1 {
+    @apply text-3xl;
+}
+
+.content h2 {
+    @apply text-2xl;
+}
+
+.content h3 {
+    @apply text-xl;
+}
+
+.content h4 {
+    @apply text-lg;
+}
+
+.content p {
+    @apply my-2;
+}
+
+.content ul, .content ol {
+    @apply my-2 list-disc ml-5;
+}
+
+.content li {
+    @apply my-1;
+}

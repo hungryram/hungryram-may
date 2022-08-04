@@ -6,7 +6,7 @@ import Intro from "../../components/blocks/Intro"
 
 export default function LegalList({ data }) {
     
-    const frontMatter = data.allLegal
+    const legals = data.allSanityLegal
 
     return (
         <Layout>
@@ -21,9 +21,9 @@ export default function LegalList({ data }) {
             <div className="section-large">
                 <div className="container text-center">
                     <ul>
-                    {frontMatter.nodes.map((node) => {
+                    {legals.nodes.map((node) => {
                         return (
-                            <li className="text-lg"><Link to={"/legal" + node.slug}>{node.frontmatter.title}</Link></li>
+                            <li className="text-lg"><Link to={ node.slug.current}>{node.title}</Link></li>
                         )
                     })}
                     </ul>
@@ -35,13 +35,14 @@ export default function LegalList({ data }) {
 
 export const query = graphql`
 {
-    allLegal {
+    allSanityLegal {
       nodes {
-        frontmatter {
-          title
+        slug {
+          current
         }
-        slug
+        title
       }
     }
   }
+  
 `

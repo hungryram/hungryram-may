@@ -1,26 +1,27 @@
 import { graphql } from "gatsby"
 import * as React from "react"
 import Layout from "../../components/global/Layout"
-import showdown from "showdown"
 import Intro from "../../components/blocks/Intro"
 import Seo from "../../components/global/Seo"
+import { PortableText } from "@portabletext/react"
 
 export default function Legal({ data }) {
-    const frontMatter = data.legal
-    const converter = new showdown.Converter();
+    const frontMatter = data.sanityLegal
     return (
         <Layout>
             <Seo
-                title={frontMatter.title_tag}
-                description={frontMatter.meta_description}
+                title={frontMatter.seo.title_tag}
+                description={frontMatter.seo.meta_description}
             />
             <Intro
-                heading={frontMatter.frontmatter.title}
+                heading={frontMatter.title}
             />
             <div className="section">
-                <div className="container markdown-content">
+                <div className="container content">
                     <div>
-                        <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(frontMatter.rawMarkdownBody) }} />
+                        <PortableText
+                            value={frontMatter._rawContent}
+                        />
                     </div>
                 </div>
             </div>
@@ -30,13 +31,17 @@ export default function Legal({ data }) {
 
 export const query = graphql`
 query ($id: String) {
-    legal(id: {eq: $id}) {
-      frontmatter {
-        title
+    sanityLegal(id: {eq: $id}) {
+      seo {
         title_tag
         meta_description
       }
-      rawMarkdownBody
+      title
+      slug {
+        current
+      }
+      _rawContent
     }
   }
+  
 `
