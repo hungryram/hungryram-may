@@ -18,13 +18,7 @@ export default {
       type: 'slug',
       description: 'We recommend clicking generate. Changing URL after publishing may cause broken pages',
       options: {
-        source: "title",
-        slugify: (input) =>
-        input.toLowerCase()
-        .replace(/\s+/g, "-").slice(0, 200)
-        //Remove special characters
-        .replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ""),
-      validation: (Rule) => Rule.required(),
+        source: "title"
       },
     },
     {
@@ -64,6 +58,12 @@ export default {
       title: 'Body',
       type: 'blockContent',
     },
+    {
+      name: 'seo',
+      title: 'Search Engine Optimization',
+      type: 'seo',
+      validation: Rule => Rule.required().error('Required for search engines')
+    }
   ],
 
   preview: {

@@ -7,7 +7,7 @@ import Seo from "../../components/global/Seo"
 
 export default function BlogList({ data }) {
 
-    const frontMatter = data.allBlog
+    const blog = data.allSanityPost
 
     return (
         <Layout>
@@ -22,13 +22,13 @@ export default function BlogList({ data }) {
             <div className="section">
                 <div className="container">
                     <div className="grid md:grid-cols-2 grid-cols-1">
-                        {frontMatter.nodes.map((node) => {
+                        {blog.nodes.map((node) => {
                             return (
                                 <BlogCard
-                                    title={node.frontmatter.title}
-                                    image={node.frontmatter.featured_image}
-                                    link={node.slug}
-                                    excerpt={node.childMarkdownRemark.excerpt}
+                                    title={node.title}
+                                    image={node.mainImage.asset.gatsbyImageData}
+                                    link={node.slug.current}
+                                    key={node._id}
                                 />
                             )
                         })}
@@ -41,21 +41,25 @@ export default function BlogList({ data }) {
 
 export const query = graphql`
 {
-    allBlog(sort: {fields: frontmatter___date, order: DESC}) {
+    allSanityPost {
       nodes {
-        frontmatter {
-          title
-          featured_image
-          image_alt_tag
+        seo {
+          title_tag
+          meta_description
         }
-        slug
-        childMarkdownRemark {
-          excerpt(pruneLength: 100)
+        slug {
+          current
         }
+        title
+        mainImage {
+          asset {
+            gatsbyImageData
+          }
+        }
+        alt_tag
+        _id
       }
     }
   }
-  
-  
   
 `
