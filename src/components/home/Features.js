@@ -15,9 +15,9 @@ export default function Features({ heading, features }) {
                     }
 
                     <div className="grid lg:grid-cols-3 mt-20 gap-y-20 gap-x-10">
-                        {features?.map((node) => {
+                        {features?.map((node, i) => {
                             return (
-                                <div>
+                                <div key={i} className="text-sm">
                                     <h3 className="text-xl mb-5">{node.heading}</h3>
                                     <p>{node.body}</p>
                                 </div>

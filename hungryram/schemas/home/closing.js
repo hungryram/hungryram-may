@@ -13,6 +13,16 @@ export default {
             type: 'blockContent'
         },
         {
+            title: 'Image',
+            name: 'image',
+            type: 'image',
+        },
+        {
+            title: 'Alt Tag',
+            name: 'altTag',
+            type: 'string'
+        },
+        {
             title: 'Blocks',
             name: 'blocks',
             type: 'array',

@@ -56,12 +56,6 @@ const resources = [
     icon: SupportIcon,
   },
   {
-    name: 'Documentation',
-    description: 'Support articles for existing clients',
-    href: '/documentation/',
-    icon: BookmarkAltIcon,
-  },
-  {
     name: 'Blog',
     description: 'Catch up on the latest blog articles',
     href: '/blog/',
@@ -183,7 +177,7 @@ export default function Example() {
                       'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                     )}
                   >
-                    <span>More</span>
+                    <span>Resources</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? 'text-gray-600' : 'text-gray-400',

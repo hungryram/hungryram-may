@@ -18,10 +18,6 @@
         @apply font-medium
     }
 
-    .container {
-        max-width: 1200px;
-    }
-
     .h2 {
         @apply text-3xl font-medium leading-10
     }
@@ -38,12 +34,6 @@
         @apply text-xl font-medium
     }
 
-    p {
-        color: #484c7a;
-        font-size: 18px;
-        font-weight: 300;
-        line-height: 1.78;    
-    }
 
     .primary-button {
         @apply py-3 px-8 text-white uppercase font-light rounded-md;
@@ -76,10 +66,17 @@
     @apply md:text-5xl text-3xl font-medium text-center leading-relaxed
 }
 
+
+p {
+    color: #484c7a;
+    font-weight: 400;
+    line-height: 1.8;    
+}
+
 /* END LAYER BASE */
 
 .primary-bg {
-    background-color: #0A2540;
+    background-color: #0C2E4E;
 }
 
 .text-white p {
@@ -137,7 +134,7 @@
 
 footer ul li a,
 footer p {
-    color: #bac0c3;
+    color: #222;
 }
 
 

@@ -187,6 +187,8 @@ export default function Home({ data }) {
       <Closing 
         content={homeData.closing._rawContent}
         features={homeData.closing.blocks}
+        image={homeData.closing.image.asset.gatsbyImageData}
+        altTag={homeData.closing.altTag}
       />
 
     </Layout>
@@ -241,9 +243,15 @@ export const query = graphql`
     }
     closing {
       _rawContent
+      altTag
       blocks {
         body
         heading
+      }
+      image {
+        asset {
+          gatsbyImageData(placeholder: BLURRED)
+        }
       }
     }
   }

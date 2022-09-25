@@ -9,13 +9,13 @@ import { IconContext } from "@react-icons/all-files"
 export default function Footer() {
     return (
         <footer style={{
-            backgroundColor: '#15171A'
+            backgroundColor: '#F6F9FC'
         }}>
             <div className="section-large">
-                <div className="container text-white">
+                <div className="container text-black">
                     <div className="md:flex flex-none">
-                        <div className="md:w-1/2 w-full mb-5">
-                            <h2 className="h2">Perfect partner for success</h2>
+                        <div className="md:w-1/2 w-full mb-5 gradient-content content">
+                            <h2>Perfect partner for <strong>success</strong></h2>
                         </div>
                         <div className="md:w-1/2 w-full">
                             <div className="md:text-right">
@@ -44,25 +44,25 @@ export default function Footer() {
                                     {
                                         contact.contact_information.email &&
                                         <li className="my-2">
-                                            <a href={`mailto: ${contact.contact_information.email}`} className="font-light">{contact.contact_information.email}</a>
+                                            <a href={`mailto: ${contact.contact_information.email}`}>{contact.contact_information.email}</a>
                                         </li>
                                     }
                                     {
                                         contact.contact_information.office &&
                                         <li className="my-2">
-                                            <a href={`tel: ${contact.contact_information.office}`} className="font-light">Office: {contact.contact_information.office}</a>
+                                            <a href={`tel: ${contact.contact_information.office}`}>Office: {contact.contact_information.office}</a>
                                         </li>
                                     }
                                     {
                                         contact.contact_information.cell &&
                                         <li className="my-2">
-                                            <a href={`tel: ${contact.contact_information.cell}`} className="font-light">Direct: {contact.contact_information.cell}</a>
+                                            <a href={`tel: ${contact.contact_information.cell}`}>Direct: {contact.contact_information.cell}</a>
                                         </li>
                                     }
                                     {
                                         contact.contact_information.address &&
                                         <li className="my-2">
-                                            <a href="#" className="font-light">{contact.contact_information.address}, {contact.contact_information.city}, {contact.contact_information.state} {contact.contact_information.zip_code} </a>
+                                            <a href="#">{contact.contact_information.address}, {contact.contact_information.city}, {contact.contact_information.state} {contact.contact_information.zip_code} </a>
                                         </li>
                                     }
                                 </ul>
@@ -71,13 +71,13 @@ export default function Footer() {
                                 <h3 className="font-medium">Web Design Services</h3>
                                 <ul className="mt-5">
                                     <li className="my-2">
-                                        <Link to="/services/small-business-website-design/" className="font-light">Small Business Websites</Link>
+                                        <Link to="/services/small-business-website-design/">Small Business Websites</Link>
                                     </li>
                                     <li className="my-2">
-                                        <Link to="/services/agent-idx-websites/" className="font-light">Real Estate IDX Websites</Link>
+                                        <Link to="/services/agent-idx-websites/">Real Estate IDX Websites</Link>
                                     </li>
                                     <li className="my-2">
-                                        <Link to="/services/responsive-web-design/" className="font-light">Responsive Web Design</Link>
+                                        <Link to="/services/responsive-web-design/">Responsive Web Design</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -85,19 +85,19 @@ export default function Footer() {
                                 <h3 className="font-medium">Support</h3>
                                 <ul className="mt-5">
                                     <li className="my-2">
-                                        <Link to="/faq/" className="font-light">FAQ</Link>
+                                        <Link to="/faq/">FAQ</Link>
                                     </li>
                                     <li className="my-2">
-                                        <Link to="/documentation/" className="font-light">Documentation</Link>
+                                        <Link to="/documentation/">Documentation</Link>
                                     </li>
                                     <li className="my-2">
-                                        <Link to="/contact/" className="font-light">Contact</Link>
+                                        <Link to="/contact/">Contact</Link>
                                     </li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 className="font-medium">About Hungry Ram</h3>
-                                <p className="mt-5" style={{ fontSize: '16px' }}>
+                                <p className="mt-5">
                                     Providing the best cutting-edge technology and tools to deliver you high-quality websites. Always aiming to provide the highest level of service. Need help growing your business? Let's connect with a web developer.
                                 </p>
                             </div>

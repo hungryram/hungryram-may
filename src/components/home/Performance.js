@@ -25,7 +25,7 @@ export default function Performance({ heading, body, featureOne, featureTwo, ima
                             <div className="mt-10">
                                 <Link to="/contact" className="primary-button">Get in touch</Link>
                             </div>
-                            <div className="grid lg:grid-cols-2 sm:grid-cols-1 mt-20 gap-10">
+                            <div className="grid lg:grid-cols-2 sm:grid-cols-1 mt-20 gap-10 text-sm">
                                 <div>
                                     {featureOne &&
                                         <PortableText
