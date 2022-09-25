@@ -27,7 +27,16 @@ export default () =>
                             .schemaType('appearances')
                             .documentId('appearances')
                     ),
+                S.listItem()
+                    .title('Home')
+                    .icon(BsPencil)
+                    .child(
+                        S.document()
+                            .title('Home')
+                            .schemaType('home')
+                            .documentId('home')
+                    ),
                 S.divider(),
-                ...S.documentTypeListItems().filter(item => !['profileSettings', 'appearances'].includes(item.getId()))
+                ...S.documentTypeListItems().filter(item => !['profileSettings', 'appearances', 'home'].includes(item.getId()))
             ]
         )

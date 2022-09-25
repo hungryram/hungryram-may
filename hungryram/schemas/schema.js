@@ -16,6 +16,27 @@ import legal from "./documents/legal"
 import menu from "./documents/navigation"
 import pages from "./documents/pages"
 import portfolio from "./documents/portfolio"
+import home from "./documents/home"
+import locations from "./documents/location"
+import services from "./documents/services"
+
+// home
+import hero from "./home/hero"
+import intro from "./home/intro"
+import performance from "./home/performance"
+import review from "./home/review"
+import features from "./home/features"
+import closing from "./home/closing"
+
+// PAGE
+import twoText from "./pages/twoText"
+import contactPage from "./pages/contactPage"
+import faq from "./pages/faq"
+import imageText from "./pages/imageText"
+import content from "./pages/content"
+import closer from "./pages/closing"
+
+
 
 import social from "./blocks/social"
 import contact from "./blocks/contact"
@@ -26,9 +47,12 @@ import link from "./blocks/link"
 import navItem from "./blocks/navItem"
 import headerMenu from "./blocks/headerMenu"
 import mainColors from "./blocks/mainColors"
+import image from "./blocks/image"
 
 //subblocks
 import subMenu from "./subBlocks/subMenu"
+import featureBlocks from "./subBlocks/featureBlocks"
+import faqBlocks from "./subBlocks/faqBlocks"
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -42,16 +66,37 @@ export default createSchema({
     // in the studio.
     profile,
     appearanceSettings,
+    home,
     portfolio,
+    locations,
+    services,
     pages,
     post,
     author,
     category,
     legal,
     menu,
+    // HOME BLOCKS
+    hero,
+    intro,
+    performance,
+    review,
+    features,
+    closing,
+    // PAGEBLOCK
+    twoText,
+    contactPage,
+    faq,
+    imageText,
+    content,
+    closer,
+    // SUBHOME BLOCKS
+    featureBlocks,
+    faqBlocks,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
+    image,
     social,
     contact,
     location,

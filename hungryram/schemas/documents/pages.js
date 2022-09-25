@@ -1,13 +1,7 @@
-import { MdOutlineArticle } from "react-icons/md"
-
-const parent = "/legal"
-
-
 export default {
     title: 'Pages',
     name: 'pages',
     type: 'document',
-    icons: MdOutlineArticle,
     fields: [
         {
             title: 'Title',
@@ -21,18 +15,37 @@ export default {
             description: 'We recommend clicking generate. Changing URL may cause broken pages',
             options: {
               source: "title",
-              slugify: (input) =>
-              input.toLowerCase()
-              .replace(/\s+/g, "-").slice(0, 200)
-              //Remove special characters
-              .replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ""),
-            validation: (Rule) => Rule.required(),
             },
         },
         {
-            title: 'Content',
-            name: 'content',
-            type: 'blockContent'
+            title: 'Header Image',
+            name: 'headerImage',
+            type: 'image',
+            options: {
+                hotspot: true
+            },
+        },
+        {
+            title: 'Hide Header',
+            name: 'hidden',
+            type: 'boolean'
+        },
+        {
+            title: 'Page Builder',
+            name: 'pageBuilder',
+            type: 'array',
+            of: [
+                {type: 'hero'},
+                {type: 'intro'},
+                {type: 'image'},
+                {type: 'features'},
+                {type: 'headingBody'},
+                {type: 'contactPage'},
+                {type: 'faq'},
+                {type: 'content'},
+                {type: 'imageText'},
+                {type: 'closer'},
+            ]
         },
         {
             title: 'Search Engine Optimization',

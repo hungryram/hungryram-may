@@ -6,7 +6,7 @@ import Seo from "../../components/global/Seo"
 import LocationList from "../../components/locations/LocationList"
 
 export default function Location({ data }) {
-    const frontMatter = data.allLocation
+    const sanity = data.allSanityLocations.nodes
     return (
         <Layout>
             <Seo
@@ -20,11 +20,11 @@ export default function Location({ data }) {
             <div className="section">
                 <div className="container text-center">
                     <ul>
-                        {frontMatter.nodes.map((node) => {
+                        {sanity.map((node) => {
                             return (
                                 <LocationList
-                                    location={node.frontmatter.title}
-                                    link={node.slug}
+                                    location={node.title}
+                                    link={`/${node.slug.current}`}
                                 />
                             )
                         })}
@@ -37,13 +37,14 @@ export default function Location({ data }) {
 
 export const query = graphql`
 {
-    allLocation {
+    allSanityLocations {
       nodes {
-        frontmatter {
-          title
+        title
+        slug {
+          current
         }
-        slug
       }
     }
-  }  
+  }
+  
 `

@@ -72,6 +72,10 @@
     }
 }
 
+.hero h1 {
+    @apply md:text-5xl text-3xl font-medium text-center leading-relaxed
+}
+
 /* END LAYER BASE */
 
 .primary-bg {
@@ -93,6 +97,33 @@
     background-clip: text;
     background-size: 300%;
 }
+
+.content.gradient-content h2 strong {
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 4s ease-in-out infinite;
+    -moz-animation: animated_text 4s ease-in-out infinite;
+    -webkit-animation: animated_text 4s ease-in-out infinite;
+    background: linear-gradient(-45deg,#0b6ae6,#9107e1,#d300d6,#039be1);
+    -webkit-background: linear-gradient(-45deg,#0b6ae6,#9107e1,#d300d6,#039be1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 300%;
+}
+
+.gradient-content h1 strong {
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 4s ease-in-out infinite;
+    -moz-animation: animated_text 4s ease-in-out infinite;
+    -webkit-animation: animated_text 4s ease-in-out infinite;
+    background: linear-gradient(-45deg,#0b6ae6,#9107e1,#d300d6,#039be1);
+    -webkit-background: linear-gradient(-45deg,#0b6ae6,#9107e1,#d300d6,#039be1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 300%;
+    font-weight: inherit
+}
+
+
 
 @keyframes animated_text {
 	0% { background-position: 0px 50%; }
@@ -133,7 +164,7 @@ footer p {
 }
 
 .content p {
-    @apply my-2;
+    @apply my-5;
 }
 
 .content ul, .content ol {

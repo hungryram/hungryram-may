@@ -1,5 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import * as React from "react"
 import Layout from "../components/global/Layout"
 import UpCity from "../images/best-web-developer-upcity.png"
@@ -9,9 +9,13 @@ import Features from "../components/home/Features"
 import Closing from "../components/home/Closing"
 import Showcase from "../components/home/Showcase"
 import Seo from "../components/global/Seo"
+import { PortableText } from "@portabletext/react"
+import Hero from "../components/templates/hero"
 
 
-export default function Home() {
+export default function Home({ data }) {
+
+  const homeData = data.sanityHome
 
   const schemaMarkup =
   {
@@ -63,20 +67,10 @@ export default function Home() {
         title="Orange County Web Design - Hungry Ram Web Design"
         description="We deliver the highest-performing SEO website designs for real estate and small businesses to help stand out from local competitors. Find out how our sites are different."
       />
-    <div className="section">
-      <div className="container">
-      <div className="text-center justify-center flex">
-        <div className="md:w-2/3">
-          <h1 className="md:heading text-3xl font-medium text-center">We build <span className="gradient-heading">high-performance websites</span> that convert</h1>
-          <p>Hungry Ram is an award-winning web design and development studio. Work with the best web design team to deliver effective websites that convert.</p>
-          <div className="mt-10">
-            <Link to="/contact" className="primary-button mx-2">Contact</Link>
-            <a href="https://calendly.com/hungry-ram" className="secondary-button mx-2">Book a call</a>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
+      <Hero
+        heading={homeData.hero._rawHeading}
+        body={homeData.hero._rawBody}
+      />
       <div className="py-10">
         <div className="container flex justify-center">
           <StaticImage
@@ -147,12 +141,17 @@ export default function Home() {
       }}>
         <div className="container">
           <div className="section">
-            <div className="md:w-1/2 w-full mt-10">
-              <h2 className="h2">We specialize in <span className="gradient-heading">real estate and small business</span> web designs</h2>
+            <div className="md:w-1/2 w-full mt-10 content gradient-content">
+              {homeData.intro._rawHeading &&
+              <PortableText
+                  value={homeData.intro._rawHeading}
+              />
+              }
             </div>
-            <div className="md:columns-2 mt-10">
-              <p className="mb-5">Hungry Ram delivers a better solution that gives our clients in real estate and small businesses the edge over their competitors. We adopted a new method called Jamstack that provides the fastest and most secure websites. With our efficiently built webites, our clients see an average of 20% increase in conversion rates when they use our website!</p>
-              <p>WordPress is the most used website builder in the world for real estate and small businesses. This means that all of your competitors are using it too, and that's a problem when you want to stand out.</p>
+            <div className="md:columns-2 mt-10 content gradient-content">
+              <PortableText
+                value={homeData.intro._rawBody}
+              />
             </div>
             <div className="mt-5">
               <Link to="/contact" className="primary-button">Get in touch</Link>
@@ -163,14 +162,91 @@ export default function Home() {
 
       <Showcase />
 
-      <Performance />
+      <Performance 
+        heading={homeData.performance._rawHeading}
+        body={homeData.performance._rawBody}
+        featureOne={homeData.performance._rawFeatureOne}
+        featureTwo={homeData.performance._rawFeatureTwo}
+        image={homeData.performance.image.asset.gatsbyImageData}
+        altTag={homeData.performance.altTag}
+      />
 
-      <Review />
+      <Review 
+        body={homeData.review._rawBody}
+        avatar={homeData.review.avatar.asset.gatsbyImageData}
+        position={homeData.review.position}
+        name={homeData.review.Name}
+        image={homeData.review.image.asset.gatsbyImageData}
+      />
 
-      <Features />
+      <Features 
+        heading={homeData.features.heading}
+        features={homeData.features.blocks}
+      />
 
-      <Closing />
+      <Closing 
+        content={homeData.closing._rawContent}
+        features={homeData.closing.blocks}
+      />
 
     </Layout>
   )
 }
+
+
+export const query = graphql`
+{
+  sanityHome {
+    hero {
+      _rawBody
+      _rawHeading
+    }
+    intro {
+      _rawBody
+    }
+    performance {
+      _rawBody
+      _rawFeatureOne
+      _rawFeatureTwo
+      _rawHeading
+      altTag
+      image {
+        asset {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+    }
+    review {
+      _rawBody
+      altTag
+      avatar {
+        asset {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+      image {
+        asset {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+      position
+      Name
+    }
+    features {
+      heading
+      blocks {
+        heading
+        body
+      }
+    }
+    closing {
+      _rawContent
+      blocks {
+        body
+        heading
+      }
+    }
+  }
+}
+
+`
