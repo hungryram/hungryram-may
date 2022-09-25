@@ -14,6 +14,11 @@ export default {
             type: 'intro'
         },
         {
+            title: 'Showcase',
+            name: 'showcase',
+            type: 'showcase'
+        },
+        {
             title: 'Performance',
             name: 'performance',
             type: 'performance'

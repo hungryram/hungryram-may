@@ -160,7 +160,9 @@ export default function Home({ data }) {
         </div>
       </div>
 
-      <Showcase />
+      <Showcase 
+        showcase={homeData.showcase.image}
+      />
 
       <Performance 
         heading={homeData.performance._rawHeading}
@@ -243,7 +245,6 @@ export const query = graphql`
     }
     closing {
       _rawContent
-      altTag
       blocks {
         body
         heading
@@ -251,6 +252,17 @@ export const query = graphql`
       image {
         asset {
           gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+    }
+    showcase {
+      heading
+      image {
+        link
+        image {
+          asset {
+            gatsbyImageData(placeholder: BLURRED)
+          }
         }
       }
     }

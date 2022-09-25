@@ -137,6 +137,12 @@ footer p {
     color: #222;
 }
 
+div.banner-section {
+    @apply mb-20;
+    background: #EDEFF3;
+    overflow: hidden
+}
+
 
 /* CONTENT */
 

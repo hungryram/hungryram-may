@@ -27,6 +27,7 @@ import performance from "./home/performance"
 import review from "./home/review"
 import features from "./home/features"
 import closing from "./home/closing"
+import showcase from "./home/showcase"
 
 // PAGE
 import twoText from "./pages/twoText"
@@ -53,6 +54,7 @@ import image from "./blocks/image"
 import subMenu from "./subBlocks/subMenu"
 import featureBlocks from "./subBlocks/featureBlocks"
 import faqBlocks from "./subBlocks/faqBlocks"
+import subshowcase from "./subBlocks/subshowcase"
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -83,6 +85,7 @@ export default createSchema({
     review,
     features,
     closing,
+    showcase,
     // PAGEBLOCK
     twoText,
     contactPage,
@@ -106,6 +109,7 @@ export default createSchema({
     navItem,
     headerMenu,
     subMenu,
-    mainColors
+    mainColors,
+    subshowcase,
   ]),
 })

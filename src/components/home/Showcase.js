@@ -9,44 +9,28 @@ import RN from "../../images/RN-insurance_cyylok.jpg"
 import Westly from "../../images/the-westly-serhant_yqk1bm.jpg"
 import Univers from "../../images/univers-serhant-landing.jpg"
 import Wingferno from "../../images/wingferno.jpg"
+import showcase from "../../../hungryram/schemas/home/showcase"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-export default function Showcase() {
+export default function Showcase({ showcase }) {
     return (
         <div className="section" style={{
             backgroundColor: '#EDEFF3'
         }}>
             <div className="md:container">
                 <div className="grid md:grid-cols-3 grid-cols-2 gap-4">
-                    <div className={Styles.showcaseCard}>
-                        <Link to="/portfolio/krave-nutrition-anaheim/">
-                            <img src={Krave} alt="Pho Ha Plus" />
-                        </Link>
-                    </div>
-                    <div className={Styles.showcaseCard}>
-                        <Link to="/portfolio/univers/">
-                            <img src={Univers} alt="Univers landing page design" />
-                        </Link>
-                    </div>
-                    <div className={Styles.showcaseCard}>
-                        <Link to="/portfolio/the-westly/">
-                            <img src={Westly} alt="The Westly web design" />
-                        </Link>
-                    </div>
-                    <div className={Styles.showcaseCard}>
-                        <Link to="/portfolio/rn-insurance/">
-                            <img src={RN} alt="Rn Insurance web design" />
-                        </Link>
-                    </div>
-                    <div className={Styles.showcaseCard}>
-                        <Link to="/portfolio/wing-ferno/">
-                            <img src={Wingferno} alt="Wing Ferno web design" />
-                        </Link>
-                    </div>
-                    <div className={Styles.showcaseCard}>
-                        <Link to="/portfolio/pho-ha-plus/">
-                            <img src={Pho} alt="Pho Ha Plus" />
-                        </Link>
-                    </div>
+                    {showcase?.map((node, i) => {
+                        return (
+                            <div className={Styles.showcaseCard} key={i}>
+                                <Link to={`${node.link}`}>
+                                   <GatsbyImage
+                                        image={node.image.asset.gatsbyImageData}
+                                        alt="Web design and development portfolio"
+                                   />
+                                </Link>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </div>

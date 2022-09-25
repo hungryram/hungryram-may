@@ -38,7 +38,7 @@ export default function SanityPages({ data }) {
 
             if (section._type === 'hero') {
                 return (
-                  <div key={section._key} className="section">
+                  <div key={section._key} className="section banner-section">
                     <Hero 
                         heading={section._rawHeading}
                         body={section._rawBody}
