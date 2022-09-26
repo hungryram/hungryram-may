@@ -3,13 +3,6 @@ import * as Styles from "../../styles/showcase.module.css"
 import { Link } from "gatsby"
 
 // FEATURED IMAGES
-import Pho from "../../images/pho-ha-plus-diamondbar.jpg"
-import Krave from "../../images/kraveanaheim_igowwj.jpg"
-import RN from "../../images/RN-insurance_cyylok.jpg"
-import Westly from "../../images/the-westly-serhant_yqk1bm.jpg"
-import Univers from "../../images/univers-serhant-landing.jpg"
-import Wingferno from "../../images/wingferno.jpg"
-import showcase from "../../../hungryram/schemas/home/showcase"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function Showcase({ showcase }) {

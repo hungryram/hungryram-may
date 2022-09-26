@@ -36,6 +36,7 @@ import faq from "./pages/faq"
 import imageText from "./pages/imageText"
 import content from "./pages/content"
 import closer from "./pages/closing"
+import logos from "./pages/logos"
 
 
 
@@ -93,6 +94,7 @@ export default createSchema({
     imageText,
     content,
     closer,
+    logos,
     // SUBHOME BLOCKS
     featureBlocks,
     faqBlocks,

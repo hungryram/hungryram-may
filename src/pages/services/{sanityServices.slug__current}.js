@@ -9,6 +9,7 @@ import Seo from "../../components/global/Seo"
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 import Hero from "../../components/templates/hero"
+import Logos from "../../components/templates/Logos"
 
 export default function ServicesDetail({ data }) {
   const pageBuilder = data.sanityServices?.pageBuilder
@@ -31,6 +32,14 @@ export default function ServicesDetail({ data }) {
                   body={section._rawBody}
                 />
               </div>
+            )
+          }
+
+          if (section._type === 'logos') {
+            return (
+              <Logos 
+              key={section._key}
+            />
             )
           }
 
@@ -391,6 +400,11 @@ query ($id: String) {
         _type
         _rawBody
         _rawHeading
+      }
+      ... on SanityLogos {
+        _key
+        _type
+        heading
       }
     }
   }

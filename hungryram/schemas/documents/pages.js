@@ -39,6 +39,7 @@ export default {
                 {type: 'intro'},
                 {type: 'image'},
                 {type: 'features'},
+                {type: 'logos'},
                 {type: 'headingBody'},
                 {type: 'contactPage'},
                 {type: 'faq'},

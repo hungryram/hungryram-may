@@ -40,6 +40,7 @@ export default {
                 {type: 'image'},
                 {type: 'features'},
                 {type: 'headingBody'},
+                {type: 'logos'},
                 {type: 'contactPage'},
                 {type: 'faq'},
                 {type: 'content'},

@@ -1,7 +1,5 @@
 import * as React from "react"
-import Intro from "../../components/blocks/Intro"
 import Layout from "../../components/global/Layout"
-import ServicesPage from "../../components/services/ServicesPage"
 import Seo from "../../components/global/Seo"
 import { graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"

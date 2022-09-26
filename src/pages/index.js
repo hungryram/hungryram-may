@@ -16,6 +16,7 @@ import Hero from "../components/templates/hero"
 export default function Home({ data }) {
 
   const homeData = data.sanityHome
+  const seo = data.sanityProfileSettings.seo
 
   const schemaMarkup =
   {
@@ -64,8 +65,8 @@ export default function Home({ data }) {
     <Layout>
       <Seo
         schemaMarkup={schemaMarkup}
-        title="Orange County Web Design - Hungry Ram Web Design"
-        description="We deliver the highest-performing SEO website designs for real estate and small businesses to help stand out from local competitors. Find out how our sites are different."
+        title={seo.title_tag}
+        description={seo.meta_description}
       />
       <Hero
         heading={homeData.hero._rawHeading}
@@ -267,6 +268,13 @@ export const query = graphql`
       }
     }
   }
+  sanityProfileSettings {
+    seo {
+      title_tag
+      meta_description
+    }
+  }
 }
+
 
 `
