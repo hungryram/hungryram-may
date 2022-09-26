@@ -6,6 +6,7 @@ import Seo from "../../components/global/Seo"
 import { graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import * as Styles from "../../styles/services.module.css"
+import Hero from "../../components/templates/hero"
 
 export default function ServiceList({ data }) {
 
@@ -17,8 +18,9 @@ export default function ServiceList({ data }) {
                 title="Services | Hungry Ram Web Design"
                 description="Full service web design and development for real estate and small businesses. We help establish an online presence using only modern tools."
             />
-            <Intro
-                heading="Services"
+            <Hero
+                title="Web Design Services"
+                subtitle="View a list of different web development services we offer."
             />
 
             <div className="section">
@@ -36,7 +38,7 @@ export default function ServiceList({ data }) {
                             </div>
                         </div>
                         <div className="lg:w-3/5 w-full">
-                            <h2 className="h2 my-10">Web Design Services</h2>
+                            <h2 className="h2 my-10">Strengthen your brand with powerful sites</h2>
                             <p>We design websites using the latest web development tools and trends with Jamstack - the future of web development</p>
                             <ul className={`pt-10 ${Styles.serviceList}`}>
 

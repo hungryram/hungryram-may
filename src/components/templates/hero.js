@@ -2,7 +2,7 @@ import { PortableText } from '@portabletext/react'
 import { Link } from 'gatsby'
 import React from 'react'
 
-export default function Hero({ heading, body }) {
+export default function Hero({ heading, body, title, subtitle }) {
     return (
         <div className="section">
             <div className="container">
@@ -12,6 +12,12 @@ export default function Hero({ heading, body }) {
                             <PortableText
                                 value={heading}
                             />
+                        }
+                        {title &&
+                            <h1>{title}</h1>
+                        }
+                        {subtitle &&
+                            <p>{subtitle}</p>
                         }
                         {body &&
                             <PortableText
