@@ -4,6 +4,7 @@ import Intro from "../../components/blocks/Intro"
 import Layout from "../../components/global/Layout"
 import PortfolioCard from "../../components/portfolio/PortfolioCard"
 import Seo from "../../components/global/Seo"
+import Hero from "../../components/templates/hero"
 
 export default function PortfolioList({ data }) {
     const frontMatter = data.allSanityPortfolio
@@ -13,9 +14,9 @@ export default function PortfolioList({ data }) {
                 title="Web Design Portfolio | Hungry Ram Web Design"
                 description="View our customers who trust us to build their site and establish a long term relationship"
             />
-            <Intro
-                heading="Web Design Case Studies"
-                body="Our clients are receiving the best support for their business and website. We love moving clients away from WordPress and Wix because we improve their site performance significantly. View case studies from companies across a wide spectrum of industries."
+            <Hero
+              title="Web Design & Development Portfolio"
+              subtitle="View various websites we've built for our clients. Want to learn how we can help with your website? Let's get in touch"
             />
             <div className="section">
                 <div className="container">
