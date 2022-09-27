@@ -59,7 +59,15 @@ export default {
     // as a block type.
     {
       type: 'image',
-      options: {hotspot: true},
     },
+    {
+      type: 'altTag'
+    },
+    {
+      type: 'leadForm'
+    },
+    {
+      type: 'blogForm'
+    }
   ],
 }

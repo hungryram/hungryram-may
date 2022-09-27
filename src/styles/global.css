@@ -68,7 +68,7 @@
 
 
 p {
-    color: #484c7a;
+    color: rgb(35 37 57);
     font-weight: 400;
     line-height: 1.8;    
 }
@@ -145,6 +145,11 @@ div.banner-section {
 
 
 /* CONTENT */
+
+.blog-content p {
+    font-size: 18px;
+    font-weight: 300;
+}
 
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
     @apply mt-4 mb-2;

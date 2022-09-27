@@ -241,7 +241,7 @@ export default function SanityPages({ data }) {
                                     name="first-name"
                                     id="first-name"
                                     autoComplete="given-name"
-                                    className="mt-1 border-b-2"
+                                    className="mt-1 p-2 bg-[#e9eff6] w-full"
                                   />
                                 </div>
   
@@ -254,11 +254,11 @@ export default function SanityPages({ data }) {
                                     name="last-name"
                                     id="last-name"
                                     autoComplete="family-name"
-                                    className="mt-1 border-b-2"
+                                    className="mt-1 p-2 bg-[#e9eff6] w-full"
                                   />
                                 </div>
   
-                                <div className="col-span-6 sm:col-span-4">
+                                <div className="col-span-6">
                                   <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
                                     Email address
                                   </label>
@@ -267,11 +267,11 @@ export default function SanityPages({ data }) {
                                     name="email-address"
                                     id="email-address"
                                     autoComplete="email"
-                                    className="mt-1 border-b-2 w-full"
+                                    className="mt-1 p-2 bg-[#e9eff6] w-full"
                                   />
                                 </div>
   
-                                <div className="col-span-6 sm:col-span-4">
+                                <div className="col-span-6">
                                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                                     Phone
                                   </label>
@@ -280,7 +280,7 @@ export default function SanityPages({ data }) {
                                     name="Phone"
                                     id="phone"
                                     autoComplete="tel"
-                                    className="mt-1 border-b-2 w-full"
+                                    className="mt-1 p-2 bg-[#e9eff6] w-full"
                                   />
                                 </div>
   
@@ -290,7 +290,7 @@ export default function SanityPages({ data }) {
                                     id="about"
                                     name="about"
                                     rows={6}
-                                    className="p-5 focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-2 border-gray-300 rounded-md"
+                                    className="mt-1 py-2 bg-[#e9eff6] w-full p-2"
                                     placeholder="Your message, please include details about your business"
                                   />
                                 </div>

@@ -2,10 +2,10 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import data from "../../../data/seo"
 
-export default function Seo({ title, description, schemaMarkup }) {
+export default function Seo({ title, description, schemaMarkup, type, image, imageAlt }) {
 
-  const titleTag = title || data.title_tag;
-  const metaDescription = description || data.meta_description;
+  const titleTag = title;
+  const metaDescription = description;
 
   return (
     <Helmet
@@ -16,8 +16,20 @@ export default function Seo({ title, description, schemaMarkup }) {
           content: metaDescription,
         },
         {
+          name: 'og:site_name',
+          content: 'Hungry Ram Web Design',
+        },
+        {
           name: 'og:type',
-          content: 'website',
+          content: type ? type : 'website',
+        },
+        {
+          name: 'og:image',
+          content: image,
+        },
+        {
+          name: 'og:image:alt',
+          content: imageAlt,
         },
         {
           name: 'og:title',
@@ -41,11 +53,11 @@ export default function Seo({ title, description, schemaMarkup }) {
         },
         {
           name: 'twitter:image',
-          content: '',
+          content: image,
         },
         {
           name: 'twitter:creator',
-          content: ''
+          content: '@ramdettmer'
         },
       ]}
     >

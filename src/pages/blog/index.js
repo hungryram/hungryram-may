@@ -29,6 +29,7 @@ export default function BlogList({ data }) {
                                     image={node.mainImage.asset.gatsbyImageData}
                                     link={node.slug.current}
                                     key={node._id}
+                                    altTag={node.alt_tag}
                                 />
                             )
                         })}
@@ -41,25 +42,21 @@ export default function BlogList({ data }) {
 
 export const query = graphql`
 {
-    allSanityPost {
-      nodes {
-        seo {
-          title_tag
-          meta_description
-        }
-        slug {
-          current
-        }
-        title
-        mainImage {
-          asset {
-            gatsbyImageData
-          }
-        }
-        alt_tag
-        _id
+  allSanityPost(sort: {fields: publishedAt, order: DESC}) {
+    nodes {
+      slug {
+        current
       }
+      title
+      mainImage {
+        asset {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+      alt_tag
+      _id
     }
   }
-  
+}
+
 `

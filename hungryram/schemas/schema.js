@@ -9,7 +9,6 @@ import blockContent from './blockContent'
 import category from './documents/category'
 import post from './documents/post'
 import author from './documents/author'
-
 import profile from "./documents/profile"
 import appearanceSettings from "./documents/appearance"
 import legal from "./documents/legal"
@@ -50,6 +49,8 @@ import navItem from "./blocks/navItem"
 import headerMenu from "./blocks/headerMenu"
 import mainColors from "./blocks/mainColors"
 import image from "./blocks/image"
+import leadform from "./blocks/leadform"
+import blogform from "./blocks/blogform"
 
 //subblocks
 import subMenu from "./subBlocks/subMenu"
@@ -101,6 +102,8 @@ export default createSchema({
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
+    leadform,
+    blogform,
     image,
     social,
     contact,
