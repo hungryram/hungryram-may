@@ -51,7 +51,6 @@ export default function Review({ avatar, body, heading, name, position, image, a
                     <GatsbyImage 
                         image={image}
                         alt={altTag}
-                        className="border"
                     />
                     }
                     </div>
