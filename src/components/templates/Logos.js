@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 export default function Logos() {
     return (
-        <div className="container text-center py-10">
+        <div className="container text-center pb-10 pt-14">
             <h2 className="third-heading">Trusted by established names</h2>
             <div className="my-10 md:flex items-center justify-center flex-none">
                 <StaticImage

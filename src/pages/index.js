@@ -11,6 +11,7 @@ import Showcase from "../components/home/Showcase"
 import Seo from "../components/global/Seo"
 import { PortableText } from "@portabletext/react"
 import Hero from "../components/templates/hero"
+import Column from "../components/templates/Column"
 
 
 export default function Home({ data }) {
@@ -74,14 +75,6 @@ export default function Home({ data }) {
         primaryCta={homeData.hero.primaryCtaText}
         secondaryCta={homeData.hero.secondaryCtaText}
       />
-      <div className="py-10">
-        <div className="container flex justify-center">
-          <StaticImage
-            src="../images/hero-image.png"
-            alt="Real Estate Web Design"
-          />
-        </div>
-      </div>
 
       <div className="container text-center py-10">
         <h2 className="third-heading">Trusted by established names</h2>

@@ -24,9 +24,10 @@ export default function Hero({ heading, body, title, subtitle, primaryCta, secon
                                 value={body}
                             />
                         }
-                        <div className="mt-10">
-                            <Link to="/contact" className="primary-button mx-2">{primaryCta ? primaryCta : 'Get a Quote'}</Link>
-                            <a href="https://calendly.com/hungry-ram" className="secondary-button mx-2">{secondaryCta ? secondaryCta : 'Talk to an Expert'}</a>
+                        <div className="mt-10 space-y-2">
+                        <Link to="/contact" className="primary-button mx-2 md:inline block">{primaryCta ? primaryCta : 'Get a Quote'}</Link>
+                        <a href="https://calendly.com/hungry-ram" className="secondary-button mx-2 md:inline block">{secondaryCta ? secondaryCta : 'Talk to an Expert'}</a>
+
                         </div>
                     </div>
                 </div>
