@@ -2,7 +2,7 @@ import { PortableText } from '@portabletext/react'
 import { Link } from 'gatsby'
 import React from 'react'
 
-export default function Hero({ heading, body, title, subtitle }) {
+export default function Hero({ heading, body, title, subtitle, primaryCta, secondaryCta }) {
     return (
         <div className="section">
             <div className="container">
@@ -25,8 +25,8 @@ export default function Hero({ heading, body, title, subtitle }) {
                             />
                         }
                         <div className="mt-10">
-                            <Link to="/contact" className="primary-button mx-2">Contact</Link>
-                            <a href="https://calendly.com/hungry-ram" className="secondary-button mx-2">Book a call</a>
+                            <Link to="/contact" className="primary-button mx-2">{primaryCta ? primaryCta : 'Get a Quote'}</Link>
+                            <a href="https://calendly.com/hungry-ram" className="secondary-button mx-2">{secondaryCta ? secondaryCta : 'Talk to an Expert'}</a>
                         </div>
                     </div>
                 </div>

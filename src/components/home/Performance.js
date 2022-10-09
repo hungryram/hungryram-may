@@ -23,7 +23,7 @@ export default function Performance({ heading, body, featureOne, featureTwo, ima
                                 }
                             </div>
                             <div className="mt-10">
-                                <Link to="/contact" className="primary-button">Get in touch</Link>
+                                <Link to="/contact" className="primary-button">Get a free consultation</Link>
                             </div>
                             <div className="grid lg:grid-cols-2 sm:grid-cols-1 mt-20 gap-10 text-sm">
                                 <div>

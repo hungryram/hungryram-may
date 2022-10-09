@@ -71,6 +71,8 @@ export default function Home({ data }) {
       <Hero
         heading={homeData.hero._rawHeading}
         body={homeData.hero._rawBody}
+        primaryCta={homeData.hero.primaryCtaText}
+        secondaryCta={homeData.hero.secondaryCtaText}
       />
       <div className="py-10">
         <div className="container flex justify-center">
@@ -155,7 +157,7 @@ export default function Home({ data }) {
               />
             </div>
             <div className="mt-5">
-              <Link to="/contact" className="primary-button">Get in touch</Link>
+              <Link to="/contact" className="primary-button">Get a free consultation</Link>
             </div>
           </div>
         </div>
@@ -205,6 +207,8 @@ export const query = graphql`
     hero {
       _rawBody
       _rawHeading
+      primaryCtaText
+      secondaryCtaText
     }
     intro {
       _rawBody

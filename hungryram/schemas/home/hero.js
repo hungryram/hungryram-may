@@ -16,6 +16,16 @@ export default {
             title: 'body',
             name: 'body',
             type: 'blockContent'
+        },
+        {
+            title: 'Primary Cta Text',
+            name: 'primaryCtaText',
+            type: 'string'
+        },
+        {
+            title: 'Secondary Cta Text',
+            name: 'secondaryCtaText',
+            type: 'string'
         }
     ]
 }
