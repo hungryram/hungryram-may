@@ -323,7 +323,7 @@ export default function LocationDetail({ data }) {
 }
 
 export const query = graphql`
-query ($id: String){
+query ($id: String) {
   sanityLocations(id: {eq: $id}) {
     seo {
       meta_description
@@ -351,8 +351,8 @@ query ($id: String){
       ... on SanityIntro {
         _key
         _type
-        heading
         _rawBody
+        _rawHeading
       }
       ... on SanityHeadingBody {
         _key
@@ -411,4 +411,5 @@ query ($id: String){
     }
   }
 }
+
 `

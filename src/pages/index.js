@@ -175,6 +175,7 @@ export default function Home({ data }) {
         position={homeData.review.position}
         name={homeData.review.Name}
         image={homeData.review.image.asset.gatsbyImageData}
+        review={homeData.review._rawReview}
       />
 
       <Features 
@@ -205,6 +206,7 @@ export const query = graphql`
     }
     intro {
       _rawBody
+      _rawHeading
     }
     performance {
       _rawBody
@@ -233,6 +235,7 @@ export const query = graphql`
       }
       position
       Name
+      _rawReview
     }
     features {
       heading
@@ -272,6 +275,5 @@ export const query = graphql`
     }
   }
 }
-
 
 `

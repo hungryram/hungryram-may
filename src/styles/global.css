@@ -152,7 +152,7 @@ div.banner-section {
 }
 
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-    @apply mt-4 mb-2;
+    @apply mt-4 mb-2 font-medium;
 }
 
 .content h1 {
@@ -172,7 +172,7 @@ div.banner-section {
 }
 
 .content p {
-    @apply my-5;
+    @apply mb-5;
 }
 
 .content ul, .content ol {

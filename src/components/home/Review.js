@@ -3,7 +3,7 @@ import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
 import RyanCoyne from "../../images/ryan-coyne-cto-serhant.jpg"
 
-export default function Review({ avatar, body, heading, name, position, image, altTag }) {
+export default function Review({ avatar, body, heading, name, position, image, altTag, review }) {
     return (
         <div className="section-large">
             <div className="container">
@@ -15,6 +15,13 @@ export default function Review({ avatar, body, heading, name, position, image, a
                             {body &&
                             <PortableText
                                 value={body}
+                            />
+                            }
+                            </div>
+                            <div className="p-6 rounded-md content bg-[#EDEFF3]">
+                            {review &&
+                            <PortableText
+                                value={review}
                             />
                             }
                             </div>

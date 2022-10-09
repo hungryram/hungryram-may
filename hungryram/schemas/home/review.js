@@ -18,6 +18,11 @@ export default {
             type: 'blockContent'
         },
         {
+            title: 'Review',
+            name: 'review',
+            type: 'blockContent'
+        },
+        {
             title: 'name',
             name: 'Name',
             type: 'string'

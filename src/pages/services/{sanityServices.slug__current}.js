@@ -349,8 +349,8 @@ query ($id: String) {
       ... on SanityIntro {
         _key
         _type
-        heading
         _rawBody
+        _rawHeading
       }
       ... on SanityHeadingBody {
         _key

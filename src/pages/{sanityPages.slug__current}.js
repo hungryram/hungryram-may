@@ -324,94 +324,93 @@ export default function SanityPages({ data }) {
 }
 
 export const query = graphql`
-query ($id: String){
-    sanityPages(id: {eq: $id}) {
-      seo {
-        meta_description
-        title_tag
-      }
-      title
-      pageBuilder {
-        ... on SanityFeatures {
-          _key
-          _type
-          blocks {
-            heading
-            body
-            _key
-          }
+query ($id: String) {
+  sanityPages(id: {eq: $id}) {
+    seo {
+      meta_description
+      title_tag
+    }
+    title
+    pageBuilder {
+      ... on SanityFeatures {
+        _key
+        _type
+        blocks {
           heading
-        }
-        ... on SanityImage {
+          body
           _key
-          _type
+        }
+        heading
+      }
+      ... on SanityImage {
+        _key
+        _type
+        asset {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+      ... on SanityIntro {
+        _key
+        _type
+        _rawBody
+        _rawHeading
+      }
+      ... on SanityHeadingBody {
+        _key
+        _type
+        _rawContent
+        _rawHeading
+      }
+      ... on SanityContactPage {
+        _key
+        _rawContent
+        _type
+      }
+      ... on SanityFaq {
+        _key
+        _type
+        faqBlock {
+          _rawAnswer
+          question
+        }
+        heading
+      }
+      ... on SanityContent {
+        _key
+        _type
+        _rawContent
+      }
+      ... on SanityImageText {
+        _key
+        _type
+        _rawContent
+        image {
           asset {
             gatsbyImageData(placeholder: BLURRED)
           }
         }
-        ... on SanityIntro {
-          _key
-          _type
-          heading
-          _rawBody
-        }
-        ... on SanityHeadingBody {
-          _key
-          _type
-          _rawContent
-          _rawHeading
-        }
-        ... on SanityContactPage {
-          _key
-          _rawContent
-          _type
-        }
-        ... on SanityFaq {
-          _key
-          _type
-          faqBlock {
-            _rawAnswer
-            question
-          }
-          heading
-        }
-        ... on SanityContent {
-          _key
-          _type
-          _rawContent
-        }
-        ... on SanityImageText {
-          _key
-          _type
-          _rawContent
-          image {
-            asset {
-              gatsbyImageData(placeholder: BLURRED)
-            }
-          }
-          reverse
-        }
-        ... on SanityCloser {
-          _key
-          _type
-          _rawContent
-          buttonLabel
-          buttonLink
-        }
-        ... on SanityHero {
-          _key
-          _type
-          _rawBody
-          _rawHeading
-        }
-        ... on SanityLogos {
-          _key
-          _type
-          heading
-        }
+        reverse
+      }
+      ... on SanityCloser {
+        _key
+        _type
+        _rawContent
+        buttonLabel
+        buttonLink
+      }
+      ... on SanityHero {
+        _key
+        _type
+        _rawBody
+        _rawHeading
+      }
+      ... on SanityLogos {
+        _key
+        _type
+        heading
       }
     }
   }
-  
-  
+}
+
 `

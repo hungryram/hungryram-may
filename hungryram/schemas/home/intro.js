@@ -10,7 +10,7 @@ export default {
         {
             title: 'Heading',
             name: 'heading',
-            type: 'string'
+            type: 'blockContent'
         },
         {
             title: 'body',
