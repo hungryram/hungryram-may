@@ -21,7 +21,7 @@ export default function BoxButton({ box }) {
                                             />
                                         }
                                         <div className="overlay"></div>
-                                        <div className="flex items-center justify-center h-full absolute left-0 right-0 z-20">
+                                        <div className="flex items-center justify-center h-full top-0 absolute left-0 right-0 z-20">
                                             <h3 className="text-xl">{node.heading}</h3>
                                         </div>
                                     </div>
