@@ -8,7 +8,11 @@ export default function Intro({ heading, body }) {
                 <div className="container">
                     <div className="flex justify-center">
                         <div className="lg:w-2/3 text-center">
-                            <h1 className="md:text-4xl font-medium">{heading}</h1>
+                            {heading &&
+                                <PortableText 
+                                    value={heading}
+                                />
+                            }
                             {body &&
                                 <PortableText 
                                     value={body}

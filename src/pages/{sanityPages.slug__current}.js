@@ -31,7 +31,7 @@ export default function SanityPages({ data }) {
               return (
                 <div key={section._key} className="section">
                   <Intro
-                    heading={section.heading}
+                    heading={section._rawHeading}
                     body={section._rawBody}
                   />
                 </div>
