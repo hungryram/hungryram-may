@@ -10,6 +10,7 @@ import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 import Hero from "../components/templates/hero"
 import Logos from "../components/templates/Logos"
+import Form from "../components/templates/Form"
 
 export default function SanityPages({ data }) {
 
@@ -225,90 +226,7 @@ export default function SanityPages({ data }) {
                         </ul>
                       </div>
                       <div>
-                        <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/thank-you">
-                          <input type="hidden" name="form-name" value="contact" />
-                          <input name="bot-field" type="hidden" />
-                          <input type="hidden" name="Subject" value="Website Contact Form" />
-                          <div className="shadow overflow-hidden sm:rounded-md">
-                            <div className="px-4 py-5 bg-white sm:p-6">
-                              <div className="grid grid-cols-6 gap-6">
-                                <div className="col-span-6 sm:col-span-3">
-                                  <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
-                                    First name
-                                  </label>
-                                  <input
-                                    type="text"
-                                    name="first-name"
-                                    id="first-name"
-                                    autoComplete="given-name"
-                                    className="mt-1 p-2 bg-[#e9eff6] w-full"
-                                  />
-                                </div>
-  
-                                <div className="col-span-6 sm:col-span-3">
-                                  <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
-                                    Last name
-                                  </label>
-                                  <input
-                                    type="text"
-                                    name="last-name"
-                                    id="last-name"
-                                    autoComplete="family-name"
-                                    className="mt-1 p-2 bg-[#e9eff6] w-full"
-                                  />
-                                </div>
-  
-                                <div className="col-span-6">
-                                  <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
-                                    Email address
-                                  </label>
-                                  <input
-                                    type="text"
-                                    name="email-address"
-                                    id="email-address"
-                                    autoComplete="email"
-                                    className="mt-1 p-2 bg-[#e9eff6] w-full"
-                                  />
-                                </div>
-  
-                                <div className="col-span-6">
-                                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-                                    Phone
-                                  </label>
-                                  <input
-                                    type="text"
-                                    name="Phone"
-                                    id="phone"
-                                    autoComplete="tel"
-                                    className="mt-1 p-2 bg-[#e9eff6] w-full"
-                                  />
-                                </div>
-  
-  
-                                <div className="mt-1 col-span-6">
-                                  <textarea
-                                    id="about"
-                                    name="about"
-                                    rows={6}
-                                    className="mt-1 py-2 bg-[#e9eff6] w-full p-2"
-                                    placeholder="Your message, please include details about your business"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                            <div className="col-span-6 sm:col-span-4">
-                              <p className="m-5 text-sm text-black">By submitting the form with your information above you are agreeing to our Terms and Conditions and Privacy Policy</p>
-                            </div>
-                            <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                              <button
-                                type="submit"
-                                className="primary-button px-20"
-                              >
-                                Submit
-                              </button>
-                            </div>
-                          </div>
-                        </form>
+                            <Form />
                       </div>
                     </div>
                   </div>

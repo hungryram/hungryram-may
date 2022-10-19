@@ -27,6 +27,7 @@ import review from "./home/review"
 import features from "./home/features"
 import closing from "./home/closing"
 import showcase from "./home/showcase"
+import boxButton from "./home/box-button"
 
 // PAGE
 import twoText from "./pages/twoText"
@@ -57,6 +58,7 @@ import subMenu from "./subBlocks/subMenu"
 import featureBlocks from "./subBlocks/featureBlocks"
 import faqBlocks from "./subBlocks/faqBlocks"
 import subshowcase from "./subBlocks/subshowcase"
+import boxbuttonArray from "./subBlocks/boxbutton"
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -81,6 +83,7 @@ export default createSchema({
     legal,
     menu,
     // HOME BLOCKS
+    boxButton,
     hero,
     intro,
     performance,
@@ -99,6 +102,7 @@ export default createSchema({
     // SUBHOME BLOCKS
     featureBlocks,
     faqBlocks,
+    boxbuttonArray,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

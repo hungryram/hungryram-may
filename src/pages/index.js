@@ -12,6 +12,7 @@ import Seo from "../components/global/Seo"
 import { PortableText } from "@portabletext/react"
 import Hero from "../components/templates/hero"
 import Column from "../components/templates/Column"
+import BoxButton from "../components/templates/BoxButton"
 
 
 export default function Home({ data }) {
@@ -61,7 +62,6 @@ export default function Home({ data }) {
     }
   }
 
-
   return (
     <Layout>
       <Seo
@@ -76,7 +76,7 @@ export default function Home({ data }) {
         secondaryCta={homeData.hero.secondaryCtaText}
       />
 
-      <div className="container text-center py-10">
+      <div className="container text-center py-10 mt-20">
         <h2 className="third-heading">Trusted by established names</h2>
         <div className="my-10 md:flex items-center justify-center flex-none">
         <StaticImage
@@ -112,7 +112,7 @@ export default function Home({ data }) {
         </div>
       </div>
 
-      <div className="py-10 z-10 relative">
+      {/* <div className="py-10 z-10 relative">
         <div className="container primary-bg flex justify-center text-center rounded-xl">
           <div className="w-5/6 text-white py-10">
             <h2 className="third-heading">Award winning web designs</h2>
@@ -129,11 +129,15 @@ export default function Home({ data }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <BoxButton 
+        box={homeData?.boxButton?.heading}
+        image={homeData?.boxButton?.heading}
+      />
 
       <div className="section" style={{
         backgroundColor: '#EDEFF3',
-        marginTop: '-100px'
       }}>
         <div className="container">
           <div className="section">
@@ -265,6 +269,17 @@ export const query = graphql`
             gatsbyImageData(placeholder: BLURRED)
           }
         }
+      }
+    }
+    boxButton {
+      heading {
+        heading
+        image {
+          asset {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        link
       }
     }
   }

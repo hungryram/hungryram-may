@@ -9,6 +9,11 @@ export default {
             type: 'hero'
         },
         {
+            title: 'Box Button',
+            name: 'boxButton',
+            type: 'boxButtons'
+        },
+        {
             title: 'Intro',
             name: 'intro',
             type: 'intro'

@@ -63,7 +63,7 @@
 }
 
 .hero h1 {
-    @apply md:text-5xl text-3xl font-medium text-center leading-relaxed
+    @apply md:text-5xl text-3xl font-medium text-center md:leading-snug
 }
 
 
@@ -141,6 +141,40 @@ div.banner-section {
     @apply mb-20;
     background: #EDEFF3;
     overflow: hidden
+}
+
+/* OVERLAYS */
+
+div.accent-gradient {
+    -webkit-transition: all .3s ease-in-out;  
+    -moz-transition: all .3s ease-in-out;  
+    -o-transition: all .3s ease-in-out;  
+    transition: all .3s ease-in-out;
+}
+
+div.accent-gradient:after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg, #0c2e4e, rgb(12 46 78 / 94%), rgb(12 46 78 / 57%));
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    @apply rounded-md;
+    -webkit-transition: all .3s ease-in-out;  
+    -moz-transition: all .3s ease-in-out;  
+    -o-transition: all .3s ease-in-out;  
+    transition: all .3s ease-in-out;
+    opacity: 1;
+}
+
+div.accent-gradient:hover:after {
+    @apply rounded-md;
+    -webkit-transition: all .3s ease-in-out;  
+    -moz-transition: all .3s ease-in-out;  
+    -o-transition: all .3s ease-in-out;  
+    transition: all .3s ease-in-out;
+    opacity: .5;
 }
 
 
